@@ -1,0 +1,9 @@
+@import url(color.css);
+@import url(layout.css);
+body{
+	background-image: url(../images/background.gif);
+	background-repeat: repeat-x;
+}
+body{
+	background-color: #333344;
+}

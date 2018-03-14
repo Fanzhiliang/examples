@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片</title>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+}
+body{
+	font-size: 62.5%;
+}
+#image-nav{
+	width: 1040px;
+	height: 280px;
+	position: relative;
+	overflow: hidden;
+	margin: 20px auto 0 auto;
+}
+#image-nav li{
+	float: left;
+}
+#image-nav a{
+	display: inline-block;
+}
+#image-nav img{
+	position: absolute;
+}
+.img-display{
+	width: 520px;
+	height: 280px;
+	left: 260px;
+	top: 0;
+	z-index: 3;
+}
+.img-left{
+	width: 312px;
+	height: 168px;
+	left: 0;
+	top: 50px;
+	z-index: 2;
+}
+.img-left-hidden{
+	width: 312px;
+	height: 168px;
+	left: -260px;
+	top: 50px;
+	z-index: -1;
+}
+.img-right{
+	width: 312px;
+	height: 168px;
+	left: 730px;
+	top: 50px;
+	z-index: 2;
+}
+.img-right-hidden{
+	width: 312px;
+	height: 168px;
+	left: 988px;
+	top: 50px;
+	z-index: -1;
+}
+.img-prev{
+	width: 30px;
+	height: 30px;
+	left: 0;
+	top: 120px;
+	z-index: 3;
+	opacity: 0.4;
+}
+.img-next{
+	width: 30px;
+	height: 30px;
+	left: 1010px;
+	top: 120px;
+	z-index: 3;
+	opacity: 0.4;
+}
+.img-prev:hover,.img-next:hover{
+	opacity: 0.8;
+}
+#buts{
+	padding-bottom: 2px;
+	z-index: 4;
+	position: absolute;
+	left: 480px;
+	top: 260px;
+}
+#buts a{
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	margin: 1px;
+	background-color: #fff;
+	opacity: 0.8;
+	border-radius: 5px;
+}
+#buts a:hover,#buts a.selected{
+	background-color: #FF5000;
+	opacity: 1;
+}
+</style>
+</head>
+<body>
+<ul id="image-nav">
+	<div id="navs">
+		<li>
+			<a href="javascript:void(0);">
+				<img src="./images/left.png" id="prev" class="img-prev">
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);">
+				<img src="./images/right.png" id="next" class="img-next">
+			</a>
+		</li>
+	</div>
+	
+	<div id="buts">
+		<a href="javascript:void(0);"></a>
+		<a href="javascript:void(0);"></a>
+		<a href="javascript:void(0);" class="selected"></a>
+		<a href="javascript:void(0);"></a>
+		<a href="javascript:void(0);"></a>
+		<a href="javascript:void(0);"></a>
+	</div>
+
+	<div id="images">
+		<li>
+			<a href="javascript:void(0);">
+				<img src="./images/skin_1.png" class="img-left-hidden">
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);">
+				<img src="./images/skin_2.png" class="img-left">
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);">
+				<img src="./images/skin_3.png" class="img-display">
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);">
+				<img src="./images/skin_4.png" class="img-right">
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);">
+				<img src="./images/skin_5.png" class="img-right-hidden">
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);">
+				<img src="./images/skin_6.png" class="img-right-hidden">
+			</a>
+		</li>
+	</div>
+</ul>
+<script>
+window.gobal = (function(window,document){
+	
+	//变量
+	var i=0,len=0,currImg=null,currBut=null,targetBut=null,
+		imageNav = document.getElementById("image-nav"),
+		prev = document.getElementById("prev"),
+		next = document.getElementById("next"),		
+		imgs = (function(){//把每个img相邻的img作为两个属性，最后返回所有图片的类数组
+			var imgs = document.getElementById("images").getElementsByTagName("img");
+			for (i=0,len=imgs.length;i<len;++i){
+				(function(currImg,imgs,i,len){
+					if(i==0){
+						currImg.prevImg = imgs[len-1];
+						currImg.nextImg = imgs[i+1];
+					}else if(i==imgs.length-1){
+						currImg.prevImg = imgs[i-1];
+						currImg.nextImg = imgs[0];
+					}else{
+						currImg.prevImg = imgs[i-1];
+						currImg.nextImg = imgs[i+1];
+					}
+				})(imgs[i],imgs,i,len);
+			}
+			return imgs;
+		})(),
+		buts = (function(){
+			var buts = document.getElementById("buts").getElementsByTagName("a");
+			for (i=0,len=buts.length;i<len;++i){
+				currBut = buts[i];
+				(function(currBut){
+					if(i==0){
+						currBut.prevBut = buts[len-1];
+						currBut.nextBut = buts[i+1];
+					}else if(i==buts.length-1){
+						currBut.prevBut = buts[i-1];
+						currBut.nextBut = buts[0];
+					}else{
+						currBut.prevBut = buts[i-1];
+						currBut.nextBut = buts[i+1];
+					}
+				})(currBut,buts,i,len);
+				if(currBut.className.indexOf("selected")!=-1){
+					buts.selected = currBut;
+				}
+			}
+			return buts;
+		})(),
+		//方法
+		getStyle = function(element){//获得样式
+			if(element.currentStyle){
+				return element.currentStyle;
+			}else{
+				return getComputedStyle(element, null);
+			}
+		},
+		setTargetStyle = function(dir){
+			var tempStyle = null;
+			for (i=0,len=imgs.length;i<len;++i){
+				currImg = imgs[i];
+				tempStyle = getStyle(currImg[dir+"Img"]);
+				currImg.target = {};
+				currImg.target.left = tempStyle.left;
+				currImg.target.top = tempStyle.top;
+				currImg.target.width = tempStyle.width;
+				currImg.target.height = tempStyle.height;
+				currImg.target.zIndex = tempStyle.zIndex;
+				currImg.target.className = currImg[dir+"Img"].className;
+			}
+		},
+		//水平移动速度、垂直移动速度、宽度改变速度、高度改变速度、时间间隔、计时执行次数
+		imgMove = function(moveX,moveY,changeW,changeH,interval,dir,moveCount){
+			setTargetStyle(dir);
+			next.onclick = false;//简单地去除事件
+			prev.onclick = false;
+			var target = null,tempStyle=null,
+				currLeft=0,currTop=0,currWidth=0,currHeight=0,
+				targetLeft=0,targetTop=0,targetWidth=0,targetHeight=0,
+				finalCount =0;
+			console.log(moveCount);
+			setTimeout(function(){
+				for (i=0,len=imgs.length;i<len;++i){
+					currImg = imgs[i];
+					tempStyle = getStyle(currImg);
+					target = currImg.target;
+					if((moveX>0&&target.className=="img-left-hidden")||(moveX<0&&target.className=="img-right-hidden")){
+						currImg.className = target.className;
+						++finalCount;
+						target.className = "";
+						currImg.style.zIndex = "-1";
+						continue;
+					}
+
+					currLeft = parseInt(tempStyle.left,10);
+					currTop = parseInt(tempStyle.top,10);
+					currWidth = parseInt(tempStyle.width,10);
+					currHeight = parseInt(tempStyle.height,10);
+
+					targetLeft = parseInt(target.left,10);
+					targetTop = parseInt(target.top,10);
+					targetWidth = parseInt(target.width,10);
+					targetHeight = parseInt(target.height,10);
+
+					if(targetWidth>currWidth){//目标width比当前大
+						currWidth += changeW;
+					}else if(targetWidth<currWidth){//目标width比当前小
+						currWidth -= changeW;
+					}
+					if(targetHeight>currHeight){//目标height比当前大
+						currHeight += changeH;
+					}else if(targetHeight<currHeight){//目标height比当前小
+						currHeight -= changeH;
+					}
+
+					if(targetTop>currTop){//目标定位比当前低
+						currTop += moveY;
+					}else if(targetTop<currTop){//目标定位比当前高
+						currTop -= moveY;
+					}//相等
+					currLeft = currLeft + moveX ;
+
+					if(target.className==""){//如果target的className为""跳过，避免已经到位的img重复
+						continue;
+					}else if((moveX<0&&currLeft<=targetLeft)||(moveX>0&&currLeft>=targetLeft)){
+						currImg.className=target.className;
+						++finalCount;
+						target.className ="";
+						currImg.style.left = "";
+						currImg.style.top = "";
+						currImg.style.width = "";
+						currImg.style.height = "";
+					}else{
+						currImg.style.left = currLeft+"px";
+						currImg.style.top = currTop+"px";
+						currImg.style.width = currWidth+"px";
+						currImg.style.height = currHeight+"px";
+						currImg.style.zIndex = target.zIndex;
+					}
+				}
+				if(finalCount<imgs.length){
+					setTimeout(arguments.callee,interval);
+				}else{//重新绑定事件
+					--moveCount;
+					next.onclick = rightMoveImage;
+					prev.onclick = leftMoveImage;
+					if(moveCount>0){
+						imgMove(moveX,moveY,changeW,changeH,interval,dir,moveCount);
+					}
+				}
+			}, interval);
+		},
+		btnMove = function(obj){
+			currBut = buts.selected;
+			if(obj.nodeName=="A"){
+				targetBut = obj;
+			}else if(typeof obj =="string"){
+				targetBut = currBut[obj+"But"];
+			}
+			targetBut.className = currBut.className;
+			currBut.className = "";
+			buts.selected = targetBut;
+		},
+		rightMoveImage = function(){
+			imgMove(-40,4,32,16,2,"prev",1);
+			btnMove("next");
+		},
+		leftMoveImage = function(){
+			imgMove(40,4,32,16,2,"next",1);
+			btnMove("prev");
+		},
+		btnClick = function(){
+			var currI,clickI,tempI;
+			for(i=0,len=buts.length;i<len;++i){
+				currBut = buts[i];
+				if(currBut===buts.selected){
+					currI = i;
+				}else if(currBut===this){
+					clickI = i;
+				}
+			}
+			tempI = clickI - currI;
+			if(tempI>0){
+				imgMove(-80,4,32,16,2,"prev",tempI);
+			}else if(tempI<0){
+				imgMove(80,4,32,16,2,"next",-tempI);
+			}
+			btnMove(this);
+		};
+	this.imageNav = function(){
+		next.onclick = rightMoveImage;
+		prev.onclick = leftMoveImage;
+		for(i=0,len=buts.length;i<len;++i){
+			(function(currBut){
+				currBut.onclick = btnClick;
+			})(buts[i]);
+		}
+	}();
+
+
+})(window,window.document);
+
+</script>
+</body>
+</html>

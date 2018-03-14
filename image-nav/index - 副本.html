@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片</title>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+}
+body{
+	font-size: 62.5%;
+}
+#image-nav{
+	width: 1040px;
+	height: 280px;
+	position: relative;
+	overflow: hidden;
+	margin: 20px auto 0 auto;
+}
+#image-nav li{
+	float: left;
+}
+#image-nav a{
+	display: inline-block;
+}
+#image-nav img{
+	position: absolute;
+}
+.img-display{
+	width: 520px;
+	height: 280px;
+	left: 260px;
+	top: 0;
+	z-index: 3;
+}
+.img-left{
+	width: 312px;
+	height: 168px;
+	left: 0;
+	top: 50px;
+	z-index: 2;
+}
+.img-left-hidden{
+	width: 312px;
+	height: 168px;
+	left: -312px;
+	top: 50px;
+	z-index: -1;
+}
+.img-right{
+	width: 312px;
+	height: 168px;
+	left: 730px;
+	top: 50px;
+	z-index: 2;
+}
+.img-right-hidden{
+	width: 312px;
+	height: 168px;
+	left: 1040px;
+	top: 50px;
+	z-index: -1;
+}
+.img-prev{
+	width: 30px;
+	height: 30px;
+	left: 0;
+	top: 120px;
+	z-index: 3;
+	opacity: 0.4;
+}
+.img-next{
+	width: 30px;
+	height: 30px;
+	left: 1010px;
+	top: 120px;
+	z-index: 3;
+	opacity: 0.4;
+}
+.img-prev:hover,.img-next:hover{
+	opacity: 0.8;
+}
+</style>
+</head>
+<body>
+<ul id="image-nav">
+	<div id="navs">
+	<li>
+		<a href="javascript:void(0);">
+			<img src="./images/left.png" id="prev" class="img-prev">
+		</a>
+	</li>
+	<li>
+		<a href="javascript:void(0);">
+			<img src="./images/right.png" id="next" class="img-next">
+		</a>
+	</li>
+	</div>
+	<div id="images">
+	<li>
+		<a href="javascript:void(0);"><img src="./images/skin_1.png" class="img-left-hidden"></a>
+	</li>
+	<li>
+		<a href="javascript:void(0);"><img src="./images/skin_2.png" class="img-left"></a>
+	</li>
+	<li>
+		<a href="javascript:void(0);"><img src="./images/skin_3.png" class="img-display"></a>
+	</li>
+	<li>
+		<a href="javascript:void(0);"><img src="./images/skin_4.png" class="img-right"></a>
+	</li>
+	<li>
+		<a href="javascript:void(0);"><img src="./images/skin_5.png" class="img-right-hidden"></a>
+	</li>
+	</div>
+</ul>
+<script>
+window.Gobal = function(window,document){
+	var i,len,staticImgs,currImg=null,nextImg=null,prevImg=null,
+		imageNav = document.getElementById("image-nav"),
+		prev = document.getElementById("prev"),
+		next = document.getElementById("next"),
+		imgs = document.getElementById("images").getElementsByTagName("img"),
+		
+		nextImage = function(){
+			staticImgs = Array.prototype.slice.call(imgs);//数组
+			staticImgs[0].oldClassName = staticImgs[0].className;
+			for (i = staticImgs.length - 1; i >= 0; i--) {
+				currImg = staticImgs[i];//当前img
+				currImg.oldClassName = currImg.className;
+				nextImg = (i==staticImgs.length-1?staticImgs[0]:staticImgs[i+1]);
+				currImg.className = nextImg.oldClassName;
+			}
+		},
+		prevImage = function(){
+			staticImgs = Array.prototype.slice.call(imgs);//数组
+			staticImgs[staticImgs.length-1].oldClassName=staticImgs[staticImgs.length-1].className;
+			for (i=0,len=staticImgs.length;i<len;++i) {
+				currImg = staticImgs[i];//当前img
+				currImg.oldClassName = currImg.className;
+				prevImg = (i==0?staticImgs[staticImgs.length-1]:staticImgs[i-1]);
+				currImg.className = prevImg.oldClassName;
+			}
+		}
+
+	this.imageNav = function(){
+		next.onclick = nextImage;
+		prev.onclick = prevImage;
+
+	}();
+
+
+};
+window.gobal = new Gobal(window,window.document);
+
+</script>
+</body>
+</html>

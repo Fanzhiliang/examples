@@ -1,0 +1,28 @@
+.menu,.wrapper-content,#head-nav,#content{
+	width: 1160px;
+}
+
+.nav-menu{
+	width: 1076px
+}
+
+.nav-menu .nav-item{
+	margin-right: 11px;
+}
+
+.nav-menu .nav-item.home{
+	margin-right: 18px;
+}
+
+.nav-menu .nav-item.side-nav{
+	margin: 0 6px;
+}
+
+.content-head #videos-scrollx{
+	width: 720px;
+}
+
+.l-con,.content-tuiguang .videos-frame{
+	width: 900px;
+}
+

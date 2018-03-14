@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sb</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/manager-value.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/globalPage.js"></script>
+	<!-- ie9及以下 -->
+	<!--[if lte IE 9]> <link rel="stylesheet" href="css/font-awesome.min.css" id="ie9-"> <![endif]-->
+</head>
+<body>
+	<!-- 左边菜单部分 -->
+	<div class="left-menu">
+		<ul class="menu-ul">
+			<li class="item">
+				<div class="item-name">
+					<i class="fa fa-home head-i svg"></i>
+					<span>首页</span>
+				</div>
+			</li> 
+			<li class="item">
+				<div class="item-name">
+					<i class="fa fa-user head-i svg"></i>
+					<span>用户管理</span>
+					<i class="fa fa-angle-right svg"></i>
+				</div>
+				<ul class="item-ul">
+					<a class="child" href="userlist.html">
+						<i class="fa fa-align-justify svg"></i>
+						<span>用户列表</span>
+						<i class="fa fa-angle-right svg"></i>
+					</a>
+					<a class="child" href="">
+						<i class="fa fa-plus svg"></i>
+						<span>添加用户</span>
+						<i class="fa fa-angle-right svg"></i>
+					</a>
+				</ul>
+			</li>
+			<li class="item">
+				<div class="item-name">
+					<i class="fa fa-archive head-i svg"></i>
+					<span>商品管理</span>
+					<i class="fa fa-angle-right svg"></i>
+				</div>
+				<ul class="item-ul">
+					<a class="child" href="">
+						<i class="fa fa-align-justify svg"></i>
+						<span>商品列表</span>
+						<i class="fa fa-angle-right svg"></i>
+					</a>
+					<a class="child" href="">
+						<i class="fa fa-plus svg"></i>
+						<span>添加商品</span>
+						<i class="fa fa-angle-right svg"></i>
+					</a>
+				</ul>
+			</li>
+			<li class="item">
+				<div class="item-name">
+					<i class="fa fa-clipboard-list head-i svg"></i>
+					<span>账单管理</span>
+					<i class="fa fa-angle-right svg"></i>
+				</div>
+				<ul class="item-ul">
+					<a class="child" href="">
+						<i class="fa fa-align-justify svg"></i>
+						<span>账单列表</span>
+						<i class="fa fa-angle-right svg"></i>
+					</a>
+					<a class="child" href="">
+						<i class="fa fa-plus svg"></i>
+						<span>添加账单</span>
+						<i class="fa fa-angle-right svg"></i>
+					</a>
+				</ul>
+			</li>
+			<li class="item">
+				<div class="item-name">
+					<i class="fa fa-clipboard head-i svg"></i>
+					<span>工单管理</span>
+					<i class="fa fa-angle-right svg"></i>
+				</div>
+				<ul class="item-ul">
+					<a class="child" href="">
+						<i class="fa fa-align-justify svg"></i>
+						<span>工单列表</span>
+						<i class="fa fa-angle-right svg"></i>
+					</a>
+					<a class="child" href="">
+						<i class="fa fa-plus svg"></i>
+						<span>添加工单</span>
+						<i class="fa fa-angle-right svg"></i>
+					</a>
+				</ul>
+			</li>
+			<li class="item manager">
+				<div class="item-name">
+					<i class="fa fa-flag head-i svg"></i>
+					<span>管理员管理</span>
+					<i class="fa fa-angle-right svg"></i>
+				</div>
+				<ul class="item-ul">
+					<a class="child" href="">
+						<i class="fa fa-align-justify svg"></i>
+						<span>管理员列表</span>
+						<i class="fa fa-angle-right svg"></i>
+					</a>
+					<a class="child" href="">
+						<i class="fa fa-plus svg"></i>
+						<span>添加管理员</span>
+						<i class="fa fa-angle-right svg"></i>
+					</a>
+				</ul>
+			</li>
+
+		</ul>
+	</div>
+	<!-- 右边内容部分 -->
+	<div class="content">
+		<!-- 导航部分 -->
+		<div class="bar">
+			<div class="page index selected">
+				<span>首页</span><!-- 首页不能关 -->
+			</div>
+		</div>
+		<div class="move-page"><!-- 页面过多时移动bar -->
+			<span><i class="fa fa-angle-double-right svg"></i></span>
+		</div>
+		<!-- 内容部分 -->
+		<div class="primary">
+			<div class="value">
+				<img src="images/loading.gif" alt="请等待..." class="loading">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

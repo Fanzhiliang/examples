@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Video.js 6.2.8</title>
+	<link href="css/video-js.min.css" rel="stylesheet">	
+	<script src="js/video.min.js"></script>
+	<link href="css/main.css" rel="stylesheet">
+	<!-- <script src="js/jquery.min.js"></script>
+	<script src="js/BrowserMatch.js"></script>	 -->
+</head>
+
+<body>
+	<div id="video-player"> <!-- controls -->
+		<video id="video" class="video-js" preload="auto" poster="yuki.jpg" controls src="0.mp4">
+			<source src="0.mp4" type="video/mp4">
+			<p class="vjs-no-js">
+			  To view this video please enable JavaScript, and consider upgrading to a web browser that
+			  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+			</p>
+	  	</video>
+<!-- 	  	<div id="control">
+	  		<div class="play start" id="small-play">
+	  			<i class="icon"></i>
+	  		</div>
+	  		<div class="progress-bar" id="progress-bar">
+	  			<div class="line all" id="all"></div>
+	  			<div class="line exist" id="exist"></div>
+	  			<div class="line cache" id="cache"></div>
+	  			<div class="pointer" id="pointer"></div>
+	  			<div class="time-tip" id="time-tip">
+	  				<div class="top-triangle"></div>
+	  				<div class="bottom-triangle"></div>
+	  				<div class="time"><span>00:00</span></div>
+	  			</div>
+	  		</div>
+			<div class="timer">
+				<span>
+					<span id="timer-of-current">00 : 00</span> / <span id="timer-of-all">00:00</span>
+				</span>
+			</div>
+			<div class="volume">
+	  			<i class="icon"></i>
+	  			<div id="volume-control" class="volume-control">
+	  				<span class="num" id="volume-text">50</span>
+	  				<div class="volume-bar" id="volume-bar">
+	  					<div class="all-volume"></div>
+	  					<div class="exist-volume" id="exist-volume"></div>
+	  					<div class="pointer" id="volume-pointer"></div>
+	  				</div>
+	  			</div>
+	  		</div>
+	  		<div class="video-small" id="toggle-width">
+	  			<i class="icon"></i>
+	  			<div class="title"><span toggle="退出宽屏">宽屏模式</span></div>
+	  		</div>
+	  		<div class="all-screen" id="toggle-screen">
+	  			<i class="icon"></i>
+	  			<div class="title"><span toggle="退出全屏">进入全屏</span></div>
+	  		</div>
+	  	</div>
+	  	<div id="start"><img src="images/start.svg" alt="播放"></div>
+	  	<div id="loading"><img src="images/loading.gif" alt="正在加载..."></div> -->
+	</div>
+	<!-- <script src="js/video-player.js"></script> -->
+	
+	<script type="text/javascript">
+		var myPlayer = videojs('video');
+		myPlayer.ready(function(){
+			var myPlayer = this;
+			// myPlayer.play();
+		});
+	</script>
+</body>
+</html>

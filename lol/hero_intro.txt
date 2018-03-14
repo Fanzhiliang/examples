@@ -1,0 +1,38 @@
+{
+	"Camille":{
+		"name":"卡密尔",
+		"head":"images/hero/Camille/head_1.png",
+		"alias":"青钢影",
+		"english":"Camille",
+		"intro":"卡蜜尔是一位优雅的特工精英，也是一台精密的人形兵器。",
+		"tags":"战士, 近战",
+		"skin":["青钢影","源代码"]
+	},
+	"Ivern":{
+		"name":"艾翁",
+		"head":"images/hero/Ivern/head_1.png",
+		"alias":"翠神",
+		"english":"Ivern",
+		"intro":"凡是他走过的地方，无不是野花盛开、草木葱茏，回应着他的笑声。坚硬的岩石和他谈笑，鲜嫩的青苔与他一起品味阳光。",
+		"tags":"辅助, 近战",
+		"skin":["翠神","糖果之王"]
+	},
+	"Kayn":{
+		"name":"凯隐",
+		"head":"images/hero/Kayn/head_1.png",
+		"alias":"影流之镰",
+		"english":"Kayn",
+		"intro":"孩童已死，杀手永存。”悉达·凯隐是修行暗影魔法的精英，他战斗的意义，是为了实现自己真正的命运——为了有朝一日能够率领影流教派，开创艾欧尼亚霸业的新世代。",
+		"tags":"打野, 物理, 坦克",
+		"skin":["影流之镰","灵魂猎手"]
+	},
+	"Nautilus":{
+		"name":"诺提勒斯",
+		"head":"images/hero/Nautilus/head_1.png",
+		"alias":"深海泰坦",
+		"english":"Nautilus",
+		"intro":"诺提勒斯苏醒时，他变得有些不太一样了。庞大的铁质潜水服已经变成了一个浑然一体的甲壳。",
+		"tags":"打野, 控制, 近战",
+		"skin":["深海泰坦","失落大陆","地底迷城","宇航员","光明骑士","灭世魔神"]
+	}
+}

@@ -1,0 +1,69 @@
+#content{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 3.6rem;
+	left: 0;
+	z-index: 1;
+	background-color: #e7e7e7;
+}
+
+#images-scrollx{ /* 1rem=pageWidth*0.0625 pageWidth=16rem */
+	position: relative;
+	width: 16rem;
+	height: 4.69333rem;
+	overflow: hidden;
+}
+
+#images-scrollx .images{
+	/*width: 500%;*/
+}
+
+#images-scrollx .images li{
+	width: 16rem;
+	height: 4.69333rem;
+	display: inline-block;
+	float: left;
+}
+
+#images-scrollx .images li a,#images-scrollx .images li img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+#images-scrollx .btn-wrapper{
+	position: absolute;
+	left: 0;
+	bottom: .192rem;
+	z-index: 0;
+	width: 100%;
+	text-align: center;
+	height: .552rem;
+	line-height: .552rem;
+}
+
+#images-scrollx .btn-wrapper .trig{
+	background-color: rgba(0,0,0,.5);
+	border-radius: .21333rem;
+	padding: 0 .32rem;
+	display: inline-block;
+}
+
+#images-scrollx .btn-wrapper .trig a{
+	width: .21333rem;
+	height: .21333rem;
+	float: left;
+	background-color: #fff;
+	border-radius: .10667rem;
+	margin: .10667rem !important;
+}
+
+#images-scrollx .btn-wrapper .trig a.on{
+	background-color: #de698c;
+}
+
+
+	
+
+

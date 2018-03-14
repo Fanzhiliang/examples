@@ -1,0 +1,25 @@
+@keyframes drop-down
+{from {
+	top: -8.5rem;
+}
+to {
+	top: 1.8775rem;
+}}
+
+#drop-head-nav.drop-down{
+	animation: drop-down 0.3s;
+	top: 1.8775rem;
+}
+
+@keyframes drop-up
+{from {
+	top: 1.8775rem;
+}
+to {
+	top: -8.5rem;
+}}
+
+#drop-head-nav.drop-up{
+	animation: drop-up 0.3s;
+	top: -8.5rem;
+}

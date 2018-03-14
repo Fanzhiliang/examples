@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PC端</title>
+    <link rel="stylesheet" href="../styles/pc-style.css">
+    <script src="../scripts/pc-init.js"></script>
+    <script src="../scripts/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/pc-global.js"></script>
+</head>
+
+<body>
+    <div id="head">
+        <div id="head-wrapper">
+            <div class="wrapper-content">
+                <a class="content-head fl" href="https://www.bilibili.com/"></a>
+                <div class="search fr">
+                    <a class="ranking" href="//www.bilibili.com/ranking">
+        				<span>排行榜</span>
+        			</a>
+                    <form class="search-form fr" action="">
+                        <input type="text" class="text fl" placeholder="胡闹的POP子和PIPI美（误！）">
+                        <input type="submit" class="submit fr" value="">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="head-menu">
+            <div class="mask-bg"></div>
+            <div class="mask"></div>
+            <div class="menu">
+                <div class="menu-con fl">
+                    <ul>
+                        <li class="menu-item home"><a href="//www.bilibili.com" title="主站" class="t"><i class="bili-icon"></i>主站</a></li>
+                        <li class="menu-item"><a href="//h.bilibili.com" target="_blank" title="画友" class="t">画友</a></li>
+                        <li class="menu-item"><a href="//game.bilibili.com" target="_blank" title="游戏中心" class="t">游戏中心</a>
+                            <div class="i-frame" style="width: 680px; height: 260px;">
+                                <iframe src="https://www.bilibili.com/page-proxy/game-nav.html" width="100%" height="100%" frameborder="0"></iframe>
+                            </div>
+                        </li>
+                        <li class="menu-item"><a href="//live.bilibili.com" target="_blank" title="直播" class="t">直播</a>
+                            <div class="i-frame" style="width: 528px; height: 266px;">
+                                <iframe src="https://live.bilibili.com/bili/live_hover" width="100%" height="100%" frameborder="0"></iframe>
+                            </div>
+                        </li>
+                        <li class="menu-item"><a href="//show.bilibili.com/platform/home.html" target="_blank" title="会员购" class="t">会员购</a></li>
+                        <li class="menu-item"><a href="//bmall.bilibili.com" target="_blank" title="周边" class="t">周边</a></li>
+                        <li class="menu-item"><a href="//app.bilibili.com" target="_blank" title="移动端" class="t">移动端</a>
+                            <div class="app-orcode-box i-frame">
+                                <img src="../images/app-orcode.png" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="up-load fr">
+                    <a href="//member.bilibili.com/v/video/submit.html" target="_blank" class="u-link">投 稿</a>
+                    <ul class="up-nav">
+                        <li><a href="//member.bilibili.com/v/#/text-apply" target="_blank"><i class="bili-icon rect i-art"></i><span>专栏投稿</span></a></li>
+                        <li><a href="//www.bilibili.com/audio/submit/" target="_blank"><i class="bili-icon rect i-ap"></i><span>音频投稿</span></a></li>
+                        <li><a href="//member.bilibili.com/v/video/submit.html" target="_blank"><i class="bili-icon rect i-vp"></i><span>视频投稿</span></a></li>
+                        <li><a href="//member.bilibili.com/v/#/article" target="_blank"><i class="bili-icon rect i-vm"></i><span>投稿管理</span></a></li>
+                        <li><a href="//member.bilibili.com/v/" target="_blank"><i class="bili-icon rect i-vc"></i><span>创作中心</span></a></li>
+                    </ul>
+                </div>
+                <div class="menu-con fr">
+                    <ul>
+                        <li class="menu-item head">
+                            <a href="//h.bilibili.com" target="_blank" class="t">
+                                <div class="i-head">
+                                    <img src="../images/head.jpg" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="menu-item"><a href="//h.bilibili.com" target="_blank" title="画友" class="t">大会员</a></li>
+                        <li class="menu-item"><a href="//h.bilibili.com" target="_blank" title="画友" class="t">消息</a></li>
+                        <li class="menu-item"><a href="//h.bilibili.com" target="_blank" title="画友" class="t">动态</a></li>
+                        <li class="menu-item"><a href="//h.bilibili.com" target="_blank" title="画友" class="t">稍后再看</a></li>
+                        <li class="menu-item"><a href="//h.bilibili.com" target="_blank" title="画友" class="t">收藏夹</a></li>
+                        <li class="menu-item"><a href="//h.bilibili.com" target="_blank" title="画友" class="t">历史</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="head-nav">
+            <ul class="nav-menu">
+                <li class="nav-item home">
+                    <a href="//www.bilibili.com" class="nav-link">
+                        <!---->
+                        <div class="nav-name">首页</div>
+                    </a>
+                    <ul class="sub-nav"></ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//www.bilibili.com/v/douga/" class="nav-link">
+                        <div class="num-wrap"><span class="num">818</span></div>
+                        <div class="nav-name">动画</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/douga/mad/" class="sub-nav-link"><span>MAD·AMV<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/douga/mmd/" class="sub-nav-link"><span>MMD·3D<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/douga/voice/" class="sub-nav-link"><span>短片·手书·配音<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/douga/other/" class="sub-nav-link"><span>综合<i class="arrow"></i></span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//bangumi.bilibili.com/22/" class="nav-link">
+                        <div class="num-wrap"><span class="num">109</span></div>
+                        <div class="nav-name">番剧</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/anime/serial/" class="sub-nav-link"><span>连载动画<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/anime/finish/" class="sub-nav-link"><span>完结动画<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/anime/information/" class="sub-nav-link"><span>资讯<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/anime/offical/" class="sub-nav-link"><span>官方延伸<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//bangumi.bilibili.com/anime/timeline" class="sub-nav-link"><span>新番时间表<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//bangumi.bilibili.com/anime/index" class="sub-nav-link"><span>番剧索引<i class="arrow"></i></span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//bangumi.bilibili.com/guochuang/" class="nav-link">
+                        <div class="num-wrap"><span class="num">74</span></div>
+                        <div class="nav-name">国创</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/guochuang/chinese/" class="sub-nav-link"><span>国产动画<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/guochuang/original/" class="sub-nav-link"><span>国产原创相关<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/guochuang/puppetry/" class="sub-nav-link"><span>布袋戏<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/guochuang/information/" class="sub-nav-link"><span>资讯<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//bangumi.bilibili.com/guochuang/timeline" class="sub-nav-link"><span>新番时间表<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//bangumi.bilibili.com/guochuang/index" class="sub-nav-link"><span>国产动画索引<i class="arrow"></i></span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//www.bilibili.com/v/music/" class="nav-link">
+                        <div class="num-wrap"><span class="num">999+</span></div>
+                        <div class="nav-name">音乐</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/music/original/" class="sub-nav-link"><span>原创音乐<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/music/cover/" class="sub-nav-link"><span>翻唱<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/music/vocaloid/" class="sub-nav-link"><span>VOCALOID·UTAU<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/music/perform/" class="sub-nav-link"><span>演奏<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/music/coordinate/" class="sub-nav-link"><span>三次元音乐<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/music/oped/" class="sub-nav-link"><span>OP/ED/OST<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/music/collection/" class="sub-nav-link"><span>音乐选集<i class="arrow"></i></span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//www.bilibili.com/v/dance/" class="nav-link">
+                        <div class="num-wrap"><span class="num">136</span></div>
+                        <div class="nav-name">舞蹈</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/dance/otaku/" class="sub-nav-link"><span>宅舞<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/dance/three_d/" class="sub-nav-link"><span>三次元舞蹈<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/dance/demo/" class="sub-nav-link"><span>舞蹈教程<i class="arrow"></i></span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//www.bilibili.com/v/game/" class="nav-link">
+                        <div class="num-wrap"><span class="num">999+</span></div>
+                        <div class="nav-name">游戏</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/game/stand_alone/" class="sub-nav-link"><span>单机游戏<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/game/esports/" class="sub-nav-link"><span>电子竞技<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/game/mobile/" class="sub-nav-link"><span>手机游戏<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/game/online/" class="sub-nav-link"><span>网络游戏<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/game/board/" class="sub-nav-link"><span>桌游棋牌<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/game/gmv/" class="sub-nav-link"><span>GMV<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/game/music/" class="sub-nav-link"><span>音游<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/game/mugen/" class="sub-nav-link"><span>Mugen<i class="arrow"></i></span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//www.bilibili.com/v/technology/" class="nav-link">
+                        <div class="num-wrap"><span class="num">999+</span></div>
+                        <div class="nav-name">科技</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/technology/fun/" class="sub-nav-link"><span>趣味科普人文<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/technology/wild/" class="sub-nav-link"><span>野生技术协会<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/technology/speech_course/" class="sub-nav-link"><span>演讲·公开课<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/technology/military/" class="sub-nav-link"><span>星海<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/technology/digital/" class="sub-nav-link"><span>数码<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/technology/mechanical/" class="sub-nav-link"><span>机械<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/technology/automobile/" class="sub-nav-link"><span>汽车<i class="arrow"></i></span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//www.bilibili.com/v/life/" class="nav-link">
+                        <div class="num-wrap"><span class="num">999+</span></div>
+                        <div class="nav-name">生活</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/life/funny/" class="sub-nav-link"><span>搞笑<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/life/daily/" class="sub-nav-link"><span>日常<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/life/food/" class="sub-nav-link"><span>美食圈<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/life/animal/" class="sub-nav-link"><span>动物圈<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/life/handmake/" class="sub-nav-link"><span>手工<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/life/painting/" class="sub-nav-link"><span>绘画<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/life/asmr/" class="sub-nav-link"><span>ASMR<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/life/sports/" class="sub-nav-link"><span>运动<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/life/other/" class="sub-nav-link"><span>其他<i class="arrow"></i></span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//www.bilibili.com/v/kichiku/" class="nav-link">
+                        <div class="num-wrap"><span class="num">52</span></div>
+                        <div class="nav-name">鬼畜</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/kichiku/guide/" class="sub-nav-link"><span>鬼畜调教<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/kichiku/mad/" class="sub-nav-link"><span>音MAD<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/kichiku/manual_vocaloid/" class="sub-nav-link"><span>人力VOCALOID<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/kichiku/course/" class="sub-nav-link"><span>教程演示<i class="arrow"></i></span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//www.bilibili.com/v/fashion/" class="nav-link">
+                        <div class="num-wrap"><span class="num">509</span></div>
+                        <div class="nav-name">时尚</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/fashion/makeup/" class="sub-nav-link"><span>美妆<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/fashion/clothing/" class="sub-nav-link"><span>服饰<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/fashion/aerobics/" class="sub-nav-link"><span>健身<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/fashion/information/" class="sub-nav-link"><span>资讯<i class="arrow"></i></span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//www.bilibili.com/v/ad/ad/" class="nav-link">
+                        <div class="num-wrap"><span class="num">111</span></div>
+                        <div class="nav-name">广告</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <!---->
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//www.bilibili.com/v/ent/" class="nav-link">
+                        <div class="num-wrap"><span class="num">999+</span></div>
+                        <div class="nav-name">娱乐</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/ent/variety/" class="sub-nav-link"><span>综艺<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/ent/star/" class="sub-nav-link"><span>明星<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/ent/korea/" class="sub-nav-link"><span>Korea相关<i class="arrow"></i></span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//www.bilibili.com/v/cinephile/" class="nav-link">
+                        <div class="num-wrap"><span class="num">999+</span></div>
+                        <div class="nav-name">影视</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/cinephile/cinecism/" class="sub-nav-link"><span>影视杂谈<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/cinephile/montage/" class="sub-nav-link"><span>影视剪辑<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/cinephile/shortfilm/" class="sub-nav-link"><span>短片<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/cinephile/trailer_info/" class="sub-nav-link"><span>预告·资讯<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/v/cinephile/tokusatsu/" class="sub-nav-link"><span>特摄<i class="arrow"></i></span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="//www.bilibili.com/cinema/" class="nav-link">
+                        <div class="num-wrap"><span class="num">127</span></div>
+                        <div class="nav-name">放映厅</div>
+                    </a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/documentary/" class="sub-nav-link"><span>纪录片<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/movie/" class="sub-nav-link"><span>电影<i class="arrow"></i></span></a></li>
+                        <li class="sub-nav-item"><a href="//www.bilibili.com/tv/" class="sub-nav-link"><span>电视剧<i class="arrow"></i></span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item side-nav zl"><a href="//www.bilibili.com/read/home" class="side-link"><i class="zhuanlan"></i><span>专栏</span></a></li>
+                <li class="nav-item side-nav nav-square"><a href="//www.bilibili.com/square" class="side-link"><i class="square"></i><span>广场</span></a>
+                    <div class="sub-nav square-wrap">
+                        <ul>
+                            <li class="sub-nav-item"><a href="//show.bilibili.com/platform/home.html" class="sub-nav-link"><i class="icon-prim icon-vip-buy"></i><span>会员购</span></a></li>
+                            <li class="sub-nav-item"><a href="//activity.bilibili.com" class="sub-nav-link"><i class="icon-prim icon-activity"></i><span>活动中心</span></a></li>
+                            <li class="sub-nav-item"><a href="//game.bilibili.com" class="sub-nav-link"><i class="icon-prim icon-game"></i><span>游戏中心</span></a></li>
+                            <li class="sub-nav-item"><a href="//news.bilibili.com" class="sub-nav-link"><i class="icon-prim icon-news"></i><span>新闻中心</span></a></li>
+                            <li class="sub-nav-item"><a href="http://h.bilibili.com" class="sub-nav-link"><i class="icon-prim icon-hy"></i><span>画友</span></a></li>
+                            <li class="sub-nav-item"><a href="//www.bilibili.com/mango" class="sub-nav-link"><i class="icon-prim icon-mango"></i><span>芒果TV</span></a></li>
+                        </ul>
+                        <div class="square-field"></div>
+                    </div>
+                </li>
+                <li class="nav-item side-nav"><a href="//live.bilibili.com" class="side-link"><i class="live"></i><span>直播</span></a>
+                    <div class="sub-nav nav-live">
+                        <ul>
+                            <li class="sub-nav-item"><a href="//live.bilibili.com/subject" class="sub-nav-link"><span>推荐主播<i class="arrow"></i></span></a></li>
+                            <li class="sub-nav-item"><a href="//live.bilibili.com/pages/area/ent" class="sub-nav-link"><span>生活娱乐<i class="arrow"></i></span></a></li>
+                            <li class="sub-nav-item"><a href="//live.bilibili.com/draw" class="sub-nav-link"><span>绘画专区<i class="arrow"></i></span></a></li>
+                            <li class="sub-nav-item"><a href="//live.bilibili.com/pages/area/ent" class="sub-nav-link"><span>唱见舞见<i class="arrow"></i></span></a></li>
+                            <li class="sub-nav-item"><a href="//live.bilibili.com/pages/area/ent" class="sub-nav-link"><span>御宅文化<i class="arrow"></i></span></a></li>
+                            <li class="sub-nav-item"><a href="//live.bilibili.com/single" class="sub-nav-link"><span>单机联机<i class="arrow"></i></span></a></li>
+                            <li class="sub-nav-item"><a href="//live.bilibili.com/online" class="sub-nav-link"><span>网络游戏<i class="arrow"></i></span></a></li>
+                            <li class="sub-nav-item"><a href="//live.bilibili.com/e-sports" class="sub-nav-link"><span>电子竞技<i class="arrow"></i></span></a></li>
+                            <li class="sub-nav-item"><a href="//live.bilibili.com/mobile-game" class="sub-nav-link"><span>手游直播<i class="arrow"></i></span></a></li>
+                        </ul>
+                        <div class="live-field fl"><a target="_blank" href="//h.bilibili.com" class="pic"><img src="//s1.hdslb.com/bfs/static/jinkela/home/images/wh2.png" alt="有文画"></a><a target="_blank" href="//vc.bilibili.com" class="pic"><img src="//s1.hdslb.com/bfs/static/jinkela/home/images/sp2.png" alt="小视频"></a></div>
+                    </div>
+                </li>
+                <li class="nav-item side-nav"><a href="//www.bilibili.com/blackroom/" class="side-link"><i class="blackroom"></i><span>小黑屋</span></a></li>
+            </ul>
+            <div class="nav-gif"><a href="" target="_blank" title="" class="random-p">
+            	<img src="../images/niuyaowu.gif" alt="">
+            </a></div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="content-head">
+            <div id="images-scrollx" class="fl">
+                <ul class="images">
+                    <li class=""><a href=""><img src="../images/img-1.jpg" alt=""></a></li>
+                    <li class=""><a href=""><img src="../images/img-2.jpg" alt=""></a></li>
+                    <li class=""><a href=""><img src="../images/img-3.jpg" alt=""></a></li>
+                    <li class=""><a href=""><img src="../images/img-4.jpg" alt=""></a></li>
+                    <li class=""><a href=""><img src="../images/img-5.jpg" alt=""></a></li>
+                </ul>
+                <ul class="trig">
+                    <span class="on"></span>
+                    <span class=""></span>
+                    <span class=""></span>
+                    <span class=""></span>
+                    <span class=""></span>
+                </ul>
+                <ul class="title">
+                    <a href="" class="on">周末来啦！</a>
+                    <a href="" class="">是什么造就了印度电影</a>
+                    <a href="" class="">过年的时候你最喜欢做什么？</a>
+                    <a href="" class="">快来围观吧~</a>
+                    <a href="" class="">黑魔王诞生</a>
+                </ul>
+            </div>
+            <div id="videos-scrollx" class="clearfix">
+                <div class="videos">
+                    <div class="video-nav-1">
+                        <a href="">
+                            <img src="../images/video-1.jpg" alt="">
+                            <div class="vdieo-mask">
+                                <p class="title">【Lex】一月新番吐槽第二弹！国家队大战人类圣经！</p>
+                                <p class="author">up主：LexBurner</p>
+                                <p class="play">播放：147.2万</p>
+                            </div>
+                        </a>
+                        <div class="later" title="稍后再看"></div>
+                    </div>
+                    <div class="video-nav-1">
+                        <a href="">
+                            <img src="../images/video-1.jpg" alt="">
+                            <div class="vdieo-mask">
+                                <p class="title">【Lex】一月新番吐槽第二弹！国家队大战人类圣经！</p>
+                                <p class="author">up主：LexBurner</p>
+                                <p class="play">播放：147.2万</p>
+                            </div>
+                        </a>
+                        <div class="later" title="稍后再看"></div>
+                    </div>
+                    <div class="video-nav-1">
+                        <a href="">
+                            <img src="../images/video-1.jpg" alt="">
+                            <div class="vdieo-mask">
+                                <p class="title">【Lex】一月新番吐槽第二弹！国家队大战人类圣经！</p>
+                                <p class="author">up主：LexBurner</p>
+                                <p class="play">播放：147.2万</p>
+                            </div>
+                        </a>
+                        <div class="later" title="稍后再看"></div>
+                    </div>
+                    <div class="video-nav-1">
+                        <a href="">
+                            <img src="../images/video-1.jpg" alt="">
+                            <div class="vdieo-mask">
+                                <p class="title">【Lex】一月新番吐槽第二弹！国家队大战人类圣经！</p>
+                                <p class="author">up主：LexBurner</p>
+                                <p class="play">播放：147.2万</p>
+                            </div>
+                        </a>
+                        <div class="later" title="稍后再看"></div>
+                    </div>
+                    <div class="video-nav-1">
+                        <a href="">
+                            <img src="../images/video-2.png" alt="">
+                            <div class="vdieo-mask">
+                                <p class="title">25m/秒下载百度云是一种什么体验？最强下载技术再次来袭！</p>
+                                <p class="author">up主：JOKER鹏少</p>
+                                <p class="play">播放：5.6万</p>
+                            </div>
+                        </a>
+                        <div class="later" title="稍后再看"></div>
+                    </div>
+                    <div class="video-nav-1">
+                        <a href="">
+                            <img src="../images/video-2.png" alt="">
+                            <div class="vdieo-mask">
+                                <p class="title">25m/秒下载百度云是一种什么体验？最强下载技术再次来袭！</p>
+                                <p class="author">up主：JOKER鹏少</p>
+                                <p class="play">播放：5.6万</p>
+                            </div>
+                        </a>
+                        <div class="later" title="稍后再看"></div>
+                    </div>
+                    <div class="video-nav-1">
+                        <a href="">
+                            <img src="../images/video-2.png" alt="">
+                            <div class="vdieo-mask">
+                                <p class="title">25m/秒下载百度云是一种什么体验？最强下载技术再次来袭！</p>
+                                <p class="author">up主：JOKER鹏少</p>
+                                <p class="play">播放：5.6万</p>
+                            </div>
+                        </a>
+                        <div class="later" title="稍后再看"></div>
+                    </div>
+                    <div class="video-nav-1">
+                        <a href="">
+                            <img src="../images/video-2.png" alt="">
+                            <div class="vdieo-mask">
+                                <p class="title">25m/秒下载百度云是一种什么体验？最强下载技术再次来袭！</p>
+                                <p class="author">up主：JOKER鹏少</p>
+                                <p class="play">播放：5.6万</p>
+                            </div>
+                        </a>
+                        <div class="later" title="稍后再看"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-tuiguang clearfix">
+            <div class="l-con">
+                <div class="headline">
+                    <i class="head-icon head-icon-tuiguang"></i>
+                    <span class="head-name">推广</span>
+                </div>
+                <div class="videos-frame">
+                    <div class="videos">
+                        <div class="video-nav-2">
+                            <a href="">
+                                <img src="../images/video-3.jpg" alt="">
+                                <div class="video-mask"></div>
+                                <div class="vdieo-info">
+                                    <p class="title">【LinsCraft】《我的世界》属于我们的此花亭奇谭</p>
+                                    <p class="num">
+                                        <span class="play"><i class="icon"></i>3.5万</span>
+                                        <span class="danmu"><i class="icon"></i>691</span>
+                                    </p>
+                                    <span class="dur">07:65</span>
+                                </div>
+                            </a>
+                            <div class="later" title="稍后再看"></div>
+                        </div>
+                        <div class="video-nav-2">
+                            <a href="">
+                                <img src="../images/video-3.jpg" alt="">
+                                <div class="video-mask"></div>
+                                <div class="vdieo-info">
+                                    <p class="title">【LinsCraft】《我的世界》属于我们的此花亭奇谭</p>
+                                    <p class="num">
+                                        <span class="play"><i class="icon"></i>3.5万</span>
+                                        <span class="danmu"><i class="icon"></i>691</span>
+                                    </p>
+                                    <span class="dur">07:65</span>
+                                </div>
+                            </a>
+                            <div class="later" title="稍后再看"></div>
+                        </div>
+                        <div class="video-nav-2">
+                            <a href="">
+                                <img src="../images/video-4.jpg" alt="">
+                                <div class="video-mask"></div>
+                                <div class="vdieo-info">
+                                    <p class="title">给你个日本小姐姐+中奖4亿日元是种什么体验！【kei和marin】</p>
+                                    <p class="num">
+                                        <span class="play"><i class="icon"></i>8.8万</span>
+                                        <span class="danmu"><i class="icon"></i>8968</span>
+                                    </p>
+                                    <span class="dur">08:69</span>
+                                </div>
+                            </a>
+                            <div class="later" title="稍后再看"></div>
+                        </div>
+                        <div class="video-nav-2">
+                            <a href="">
+                                <img src="../images/video-4.jpg" alt="">
+                                <div class="video-mask"></div>
+                                <div class="vdieo-info">
+                                    <p class="title">给你个日本小姐姐+中奖4亿日元是种什么体验！【kei和marin】</p>
+                                    <p class="num">
+                                        <span class="play"><i class="icon"></i>8.8万</span>
+                                        <span class="danmu"><i class="icon"></i>8968</span>
+                                    </p>
+                                    <span class="dur">08:69</span>
+                                </div>
+                            </a>
+                            <div class="later" title="稍后再看"></div>
+                        </div>
+                        <div class="video-nav-2">
+                            <a href="">
+                                <img src="../images/video-4.jpg" alt="">
+                                <div class="video-mask"></div>
+                                <div class="vdieo-info">
+                                    <p class="title">给你个日本小姐姐+中奖4亿日元是种什么体验！【kei和marin】</p>
+                                    <p class="num">
+                                        <span class="play"><i class="icon"></i>8.8万</span>
+                                        <span class="danmu"><i class="icon"></i>8968</span>
+                                    </p>
+                                    <span class="dur">08:69</span>
+                                </div>
+                            </a>
+                            <div class="later" title="稍后再看"></div>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+            <div class="r-con">
+                <div class="online">
+                    <a href="">在线人数：2578028</a>
+                    <em></em>
+                    <a href="">最新投稿：31238</a>
+                </div>
+                <a href="" class="ad">
+                    <img src="../images/ad-1.jpg" alt="" class="ad-content">
+                    <img src="../images/ad-icon.png" alt="" class="ad-icon">
+                </a>
+            </div>
+        </div>
+        <a href="" class="ad bigger clearfix">
+            <img src="../images/ad-2.jpg" alt="" class="ad-content">
+            <img src="../images/ad-icon.png" alt="" class="ad-icon">
+        </a>
+    </div>
+</body>
+
+</html>

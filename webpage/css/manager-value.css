@@ -1,0 +1,270 @@
+@import url(reset.css);
+#user-list{
+	position: relative;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+/*@value-head
+******************************************************************************************************/
+#value-head{
+	width: 100%;
+	position: relative;
+	float: left;
+	font-size: 0.9em;
+	padding-left: 2.5%;
+}
+
+/* 搜索
+******************************************************************************************************/
+#value-head .search{
+	width: 97%;
+	text-align: left;
+	display: block;
+	font-size: 1.5em;
+}
+
+#value-head .search label{
+	margin-right: 0.8em;
+	font-size: 0.8em;
+}
+
+#value-head .search label.status{
+	margin: 0;
+}
+
+#value-head .search input{
+	margin-right: 2em;
+	height: 1.2em;
+	padding: 0.2em 0.3em;
+	font-size: 0.8em;
+	font-size: 0.8em;
+	width: 10em;
+}
+
+#value-head .search select{
+	margin-right: 2em;
+	font-size: 0.8em;
+}
+
+#value-head .search .submit{
+	width: 3em;
+	height: 2em;
+	font-size: 1em;
+	color: #fff;
+	background-color: #438EB8;
+	border: 0;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	margin-left: 0;
+}
+
+
+/*@content
+******************************************************************************************************/
+#value-content{
+	width: 100%;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	font-size: 0.9em;
+}
+
+/*@table start
+***************************************************************************************/
+#value-content table{
+	width: 61.2em;
+	float: left;
+	display: block;
+	font-size: 1.2em;
+	border-collapse: collapse;
+	position: relative;
+	margin:2% auto 0 2%; 
+  	border-collapse:collapse;
+  	background-color: #d3d3d3;
+  	table-layout: fixed;
+}
+
+#value-content thead {
+  	display:block;
+}
+
+#value-content tbody {
+	width: 62em;
+  	height:21.5em;
+  	overflow-y:scroll;
+  	overflow-x:hidden;
+  	display:block;
+  	background-color: #d3d3d3;
+}
+
+#value-content table .odd{
+	background-color: #f1f1f1;
+}
+
+#value-content table .even{
+	background-color: #fff;
+}
+
+#value-content table tr{/*ie9不加这个高度太高*/
+	max-height: 2em;
+	overflow: hidden;
+}
+
+#value-content table td{
+	max-height: 2em;
+	padding: 0.8em 0 0.8em 0.5em;
+	text-align: left;
+	border: #d3d3d3 1px solid;
+	overflow: hidden;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#value-content table td.checkboxs,
+#value-content table td.id{
+	text-align: center;
+	width: 4em;
+	min-width: 4em;
+	max-width: 4em;
+	padding-left: 0; 
+}
+
+#value-content table td.checkboxs,#value-content table td.checkboxs *{
+	color: #438EB8;
+	cursor: pointer;
+}
+
+#value-content table td.name,
+#value-content table td.email{
+	width: 13em;
+	min-width: 13em;
+	max-width: 13em;
+}
+
+#value-content table td.status{
+	width: 5em;
+	min-width: 5em;
+	max-width: 5em;
+}
+
+#value-content table td.reg-time{
+	width: 15em;
+	min-width: 15em;
+	max-width: 15em;
+}
+
+#value-content table td.price{
+	width: 5em;
+	min-width: 5em;
+	max-width: 5em;
+}
+
+#value-content table td.type{
+	width: 7em;
+	min-width: 7em;
+	max-width: 7em;
+}
+
+#value-content table td.info{
+	width: 25em;
+	min-width: 25em;
+	max-width: 25em;
+	padding-right: 0.5em;
+}
+
+#value-content table td.ps{
+	width: 14.3em;
+	min-width: 14.3em;
+	max-width: 14.3em;
+	padding-right: 0.5em;
+}
+
+#value-content table td.number{
+	width: 5em;
+	min-width: 5em;
+	max-width: 5em;
+	padding-right: 0.5em;
+}
+
+#value-content table td.bill-number{
+	width: 7em;
+	min-width: 7em;
+	max-width: 7em;
+	padding-right: 0.5em;
+}
+
+#value-content table td.control{
+	width: 4em;
+	min-width: 4em;
+	max-width: 4em;
+}
+
+#value-content table td.blank{
+	width: 0.55em;
+	min-width: 0.55em;
+	max-width: 0.55em;
+}
+
+#value-content table td.pages{
+	width: 40em;
+	min-width: 40em;
+	max-width: 40em;
+	text-align: left;
+	color: #333;
+	padding-left: 18em;
+}
+
+#value-content table tbody a{
+	font-size: 1.2em;
+	position: relative;
+	top: 0.1em;
+	color: #333;
+}
+
+#value-content table tfoot a{font-size: 1.2em;}
+
+#value-content table tfoot a,#value-content table tfoot span{
+	color: #000;
+	margin: 0 0.5em;
+}
+
+#value-content table tfoot span.disabled{
+	color: gray;
+	cursor: default;
+}
+
+#value-content table tfoot input{
+	width: 1.5em;
+}
+/*@table end
+***************************/
+
+/*@animaton
+***************************************************************************************************/
+#value-head .user-email .hover:hover .drop-down-menu{
+	display: block;
+}
+
+#value-head .user-email .hover:hover .link{
+	color: #7A8382;/*#ccc*/
+}
+
+#value-head .user-email .hover .drop-down-menu .item:hover a{
+	color: #7A8382;/*#ccc*/
+}
+
+/*@hack
+*****************************************************************************************************/
+@media screen and (-webkit-min-device-pixel-ratio:0){/*chrome、safari、opera*/
+	#value-content tbody {
+		width: 62.1em;
+		height: 20em;
+	}
+	#value-content table td.pages{
+		width: 40.2em;
+		min-width: 40.2em;
+		max-width: 40.2em;
+	}
+}

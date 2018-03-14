@@ -1,0 +1,384 @@
+html,body{
+	width: 100%;
+	height: 100%;
+}
+*{border: 0;margin: 0;padding: 0;}
+body{background-color: #fff;}
+.icon{
+	background-image: url(../images/player-icons.png);
+}
+.pointer{
+	width: 12px;
+	height: 12px;
+	margin-left: -7px;
+	border-radius: 50%;
+	background-color: #fff;
+	border: 1px solid #E2E2E2;
+	position: absolute;
+	z-index: 5;
+	-moz-box-shadow: 0 0 2px #00A1F1; /* 老的 Firefox */
+	box-shadow: 0 0 2px #00A1F1;
+}
+/*@video
+****************************************************************************************************/
+	#video-player{ 
+		width: 690px; /*宽屏980px*/
+		height: 450px; /*宽屏570px*/
+		margin: 30px auto 0 auto;
+		background-color: #000;
+		text-align: center;
+		position: relative;
+		border: 1px solid #E2E2E2;
+		overflow: hidden;
+	}
+
+	#video{
+		width: 680px; /*宽屏980px*/
+		height: 410px; /*宽屏530px*/
+		background-size: 100%;
+		padding: 10px 5px 0 5px;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	
+
+	#control{
+		width: 100%;
+		height: 28px;
+		background-color: #fff;
+		display: inline-block;
+		position: relative;
+		z-index: 4;
+	}
+
+	#control>div{
+		text-align: center;
+		height: 28px;
+		display: inline-block;
+		float: left;
+		cursor: pointer;
+		position: relative;
+	}
+
+	#control>div .icon{
+		width: 20px;
+		height: 28px;
+		display: inline-block;
+		color: #99a2aa;
+		opacity: 0.7;
+	}
+
+	#control>div .title{
+		display: none;
+		font-size: 12px;
+		background-color: rgba(0,0,0,0.8);
+		position: absolute;
+		border-radius: 4px;
+		top: -28px;
+		right: -15px;
+		color: #fff;
+	}
+
+	#control .all-screen .title{
+		right: 0;
+	}
+
+	#control>div .title span{
+		width: 50px;
+		padding: 5px;
+		display: block;
+	}
+
+	#control .play{
+		width: 40px;
+	}
+
+	#control .volume,
+	#control .video-big,
+	#control .video-small,
+	#control .all-screen{
+		width: 30px;
+	}
+
+	#control .timer{
+		width: 90px;
+		font-size: 12px;
+		color: #ccc;
+		text-align: center;
+	}
+
+	#control .timer span{
+		line-height: 27px;
+	}
+
+	#control .progress-bar{
+		width: 450px; /*宽屏740px*/
+		margin-right: 10px;
+		margin-left: 10px;
+		z-index: 9;
+	}
+
+	#control .progress-bar .line{
+		height: 0;
+		position: absolute;
+		border-width: 3px;
+		border-style: solid;
+		border-radius: 5px;
+		left: 0;
+		top: 10px;
+		/*左右边框各种3px 总长度536px*/
+		box-sizing: border-box;/*关键*/
+	}
+
+	#control .progress-bar .all{
+		width: 100%;
+		border-color: #E5E9EF;
+		position: absolute;
+		z-index: 1;
+	}
+
+	#control .progress-bar .exist{
+		width: 0%;/*控制时修改*/
+		border-color: #00A1F1;
+		z-index: 3;
+	}
+
+	#control .progress-bar .cache{
+		width: 0%;/*控制时修改*/
+		border-color: #8ADCED;
+		z-index: 2;
+	}
+
+	#control .progress-bar .pointer{
+		left: 0%;/*控制时修改*/
+		top: 6px;
+	}
+
+	#control .progress-bar .time-tip{
+		display: none;
+		width: 10px;
+		height: 16px;
+		margin-left: -3px;
+		position: absolute;
+		left: 0%;/*控制时修改*/
+		top: 5px;
+		z-index: 4;
+	}
+
+	#control .progress-bar .time-tip .top-triangle{
+		width: 0;
+		height: 0;
+		border: 4px solid transparent;
+		border-top-color: #00A1F1;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#control .progress-bar .time-tip .bottom-triangle{
+		width: 0;
+		height: 0;
+		border: 4px solid transparent;
+		border-bottom-color: #00A1F1;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+	#control .progress-bar .time-tip .time{
+		font-size: 12px;
+		background-color: rgba(255,255,255,0.8);
+		color: #000;
+		border-radius: 4px;
+		position: absolute;
+		top: -24px;
+		left: -18px;
+	}
+
+	#control .progress-bar .time-tip .time span{
+		margin: 5px 7px;
+	}
+
+	#control .volume .volume-control{
+		width: 100%;
+		background-color: #fff;
+		position: absolute;
+		top: -100px;
+		left: 0;
+		font-size: 12px;
+		color: #ccc;
+		border-radius: 4px 4px 0 0;
+		display: none;
+	}
+
+	#control .volume .volume-control .num{
+		display: block;
+		padding-top: 6px;
+		padding-bottom: 5px;
+	}
+
+	#control .volume .volume-control .volume-bar{
+		width: 100%;
+		height: 65px;
+		position: relative;
+		margin: 5px 0;
+	}
+
+	#control .volume .volume-control .volume-bar .all-volume{
+		width: 0;
+		height: 100%;
+		border-color: #E5E9EF;
+		position: absolute;
+		z-index: 1;
+		position: absolute;
+		border-width: 3px;
+		border-style: solid;
+		border-radius: 5px;
+		left: 12px;
+		top: 0;
+		box-sizing: border-box;
+	}
+
+	#control .volume .volume-control .volume-bar .exist-volume{
+		width: 0;
+		height: 15%;/*修改*/
+		border-color: #00A1F1;
+		position: absolute;
+		z-index: 2;
+		position: absolute;
+		border-width: 3px;
+		border-style: solid;
+		border-radius: 5px;
+		left: 12px;
+		bottom: 0;
+		box-sizing: border-box;
+	}
+
+	#control .volume .volume-control .volume-bar .pointer{
+		left: 8px;
+		bottom: 15%;/*修改*/
+		margin-left: 0;
+		z-index: 3;
+		margin-bottom: -7px;
+	}
+
+	#start{
+		width: 100px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		opacity: 0.5;
+		cursor: pointer;
+		display: block;
+	}
+
+	#loading{
+		width: 8%;
+		height: 10%;
+		position: absolute;
+		left: 46%;
+		top: 45%;
+		cursor: pointer;
+		text-align: center;
+		background-color: rgba(0,0,0,0.5);
+		border-radius: 5px;
+		display: block;
+	}
+
+	#loading img{
+		width: 60%;
+		position: relative;
+		top: 15%;
+		display: inline-block;
+	}
+
+/*@animation
+****************************************************************************************************/
+	#control .play:hover,
+	#control .volume:hover,
+	#control .video-big:hover,
+	#control .video-small:hover,
+	#control .all-screen:hover{
+		background-color: #F4F5F7;
+	}
+
+	#control>div:hover .icon{
+		opacity: 1;
+	}
+
+	#control>div:hover .title{
+		display: block;
+	}
+
+	#control .volume:hover .volume-control{
+		display: block;
+	}
+
+/*@i
+****************************************************************************************************/
+	#control .play.start .icon{
+		background-position: 0 3px;
+	}
+
+	#control .play.pause .icon{
+		background-position: -31px -55px;
+	}
+
+	#control .volume .icon{
+		background-position: -30px 3px;
+	}
+
+	#control .video-small .icon{
+		background-position: 0px -32px;
+	}
+
+	#control .video-big .icon{
+		background-position: 0px -56px;
+	}
+
+	#control .all-screen .icon{
+		background-position: -31px -32px;
+	}
+
+/*@full
+****************************************************************************************************/
+	#video-player.full{
+		border: 0;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+
+	#video-player.full #video{
+		width: 100%;
+		height: auto;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#video-player.full #control{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+/*@big
+****************************************************************************************************/
+	#video-player.big{
+		width: 980px;
+		height: 570px;
+	}
+
+	#video-player.big #video{
+		width: 980px;
+		height: 530px;
+	}
+
+	#video-player.big #control .progress-bar{
+		width: 740px;
+	}
+
+/*.vjs-poster{background-size: 100%;}*/

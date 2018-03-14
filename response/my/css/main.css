@@ -1,0 +1,64 @@
+/*重设*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+ul,li{
+	list-style: none;
+}
+/* 获得焦点时不会出现虚线框 */
+:focus {
+	outline: 0;
+}
+
+/*主体
+****************************************************************************/
+#wrapper{
+	width: 960px;
+	margin: 0 auto;
+}
+
+#header{
+	width: 940px;
+	margin: 0 10px;
+	background-color: #779307;
+}
+
+#navigation ul li{
+	display: inline-block;
+}
+
+#sidebar{
+	width: 220px;
+	margin: 0 10px;
+	background-color: #fe9c00;
+	float: left;
+}
+
+#content{
+	width: 700px;
+	margin: 0 10px;
+	background-color: #dedede;
+	float: right;
+}
+
+#footer{
+	width: 940px;
+	margin: 0 10px;
+	background-color: #663300;
+	float: both;
+}

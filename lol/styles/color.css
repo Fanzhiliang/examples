@@ -1,0 +1,67 @@
+#herolist header{
+	background-color: #31455b;
+}
+#herolist header h5{
+	color: #ffffff;
+}
+#herolist article{
+	background-color: #11151e;
+	color: #006699;
+}
+#herolist article .content .hero img{
+	outline: thin solid #006699;
+}
+#herolist article .content .hero img:hover{
+	outline: thin solid #007ab1;
+}
+.display{
+	background-color: #000000;
+	border:thin solid #007ab1;
+}
+.tipContent p{
+	color:#9ddbef;
+}
+.tipContent p.tags{
+	color: #e0a111;
+}
+
+/*hero.php*/
+#hero{
+	background-color: #fbfbfb;
+}
+#introduce{
+	background-color: #ffffff;
+	outline: 1px solid #efefef;
+}
+.guide{
+	border-bottom: 1px solid #efefef;
+}
+.guide a:link,a:visited{
+	text-decoration: none;
+	color: #333333;
+}
+.guide a:hover{
+	text-decoration: underline;
+	color: #00a787;
+}
+.guide span{
+	color: #a699b3;
+}
+.ctrl *{
+	color: gray;
+}
+.ctrl div:hover{
+	color: #ffffff;
+}
+.skinInfo{
+	background-color: rgba(0,0,0,0.5);
+}
+#textInfo{
+	color: #ffffff;
+}
+#textInfo div{
+	background-color: rgb(0,164,131);
+}
+.skinCtrl{
+	background-color: rgba(0,0,0,0.7);
+}

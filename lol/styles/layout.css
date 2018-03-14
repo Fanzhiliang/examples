@@ -1,0 +1,206 @@
+body *{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#herolist{
+	width: 720px;
+	margin: 20px auto;
+}
+#herolist header{
+	width: 100%;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+#herolist header h5{
+	padding:10px;
+}
+#herolist article{
+	border: 2px solid #31455b;
+	width: 716px;
+	float: left;
+}
+#herolist article .content{
+	width: 630px;
+	margin: 20px 45px;
+	margin-bottom: 0px;
+	height: auto;
+	float: left;
+}
+#herolist article .content .hero{
+	width: 80px;
+	height: 110px;
+	margin:0px 5px; 
+	float: left;
+}
+#herolist article .content .hero>a img{
+	width: 80px;
+	height: 80px;
+}
+#herolist article .content .hero>p{
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	font-size: 8px;
+	font-weight: 600;
+}
+#json{
+	display: none;
+}
+.hidden{
+	display: none;
+}
+.display{
+	width: 323px;
+	height: 208px;
+	position: absolute;
+	z-index: 99;
+}
+.tipContent{
+	width: 285px;
+	height: 190px;
+	margin: 20px 20px;
+	margin-bottom: 0px;
+	font-size: 8px;
+	float:left;
+}
+.tipContent>a img{
+	width: 60px;
+	height: 60px;
+	float:left;
+}
+.tipContent p{
+	text-indent: 1em;
+	margin:5px 0px;
+}
+.tipContent p.intro{
+	text-indent: 0em;
+	clear: both;
+	line-height: 20px;
+}
+.tipContent p.tags{
+	text-indent: 0em;
+}
+
+/*hero.php*/
+#hero{
+	margin-left: 8%;
+	margin-right: 8%;
+	margin-top:60px;
+}
+#introduce{
+	width: 1130px;
+}
+#introduce>div{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.guide{
+	padding: 10px 0px 5px 0px;
+	font-size: 15px; 
+}
+.guide span{
+	font-size: 13px; 
+}
+.skin{
+	width: 1100px;
+	height: 560px;
+	padding: 10px 0px 10px 0px;
+	font-size: 15px;
+	overflow: hidden; 
+	position: relative;
+}
+.skin img{
+	width: 1100px;
+	height: 560px;
+	position: absolute;
+	left: 0px;
+	z-index: 1;
+}
+.skinInfo{
+	width: 370px;
+	height: 440px;
+	position: absolute;
+	left: 0px;
+	top: 10px;
+	z-index: 2;
+}
+.heroInfo{
+	width: 300px;
+	height: 420px;
+	margin: 20px 35px 0px 35px;
+}
+#linkInfo{
+	width: 300px;
+	height: 120px;
+}
+#textInfo{
+	width: 300px;
+	height: 140px;
+}
+#textInfo h1{
+	font-size: 50px;
+}
+#textInfo div{
+	width: 35px;
+	height: 20px;
+	display: inline;
+	margin: 0px 2px;
+	padding: 2px 4px;
+	text-align: center;
+	font-size: 12px;
+	border-radius: 5px;
+}
+.skinCtrl{
+	width: 370px;
+	height: 120px;
+	position: absolute;
+	left: 0px;
+	top: 450px;
+	z-index: 3;
+}
+.ctrl{
+	width: 370px;
+	height: 60px;
+	margin: 30px 0px;
+	position: relative;
+}
+.ctrl:hover{
+	cursor: pointer;
+}
+.ctrl div{
+	width: 35px;
+	height: 60px;
+	font-size: 30px;
+	text-align: center;
+	line-height: 45px;
+	padding: 25px auto;
+}
+#left{
+	float: left;
+}
+#right{
+	float: right;
+}
+#bars{
+	float: left;
+	width: 300px;
+	height: 60px;
+	overflow: hidden;
+	position: relative;
+}
+#bars img{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+}
+#aim{
+	width: 56px;
+	height: 56px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border: 2px solid rgba(0,164,131,1); 
+	z-index: 3;
+}
+

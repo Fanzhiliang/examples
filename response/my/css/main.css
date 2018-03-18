@@ -58,7 +58,7 @@ body{
 
 #header{
 	width: 97.91666667%;
-	height: 10em;
+	height: 6em;
 	margin: 0 0.01041666% 2em 0.01041666%;
 	position: relative;
 }
@@ -104,24 +104,26 @@ body{
 	color: #333;
 }
 
+/*content
+*******************************************************************************************************/
 #content{
 	width: 72.9166666%;
 	margin: 1.875em 0.01041666%;
 	float: right;
 }
-
-#content>*{
+/*index*******************************************************************************/
+#index #content>*{
 	float: left;
 	display: block;
 }
 
-#content img{
+#index #content img{
 	width: 25%;
 	max-width: 280px;
 	margin-right: 2%;
 }
 
-#content h1{
+#index #content h1{
 	width: 72%;
 	font-size: 2.8125em;
 	margin: 2% 0 3% 1%;
@@ -131,7 +133,7 @@ body{
 	text-shadow: 4px 4px 1px #DAD7D7;
 }
 
-#content em{
+#index #content em{
 	width: 72%;
 	font-size: 1.5em;
 	font-family: 'Glyphicons Halflings';
@@ -141,14 +143,103 @@ body{
 	letter-spacing: 0.3125em;
 }
 
-#content p{
+#index #content p{
 	width: 72%;
 	font-size: 1.25em;
 	color: #504E4E;
 	line-height: 1.625em;
 	letter-spacing: 0.3125em;
+	text-indent: 2em;
+}
+/*info*******************************************************************************/
+#info #content{
+	padding-bottom: 2em;
 }
 
+#info #content>*{
+	width: 100%;
+	float: left;
+}
+#info #content h1{
+	font-size: 2.5em;
+	color: #333;
+	font-weight: 200;
+}
+
+#info #content h1 span{
+	font-size: 0.35em;
+	color: #ccc;
+}
+
+#info #content h2{
+	font-size: 1.25em;
+	font-weight: 600;
+	margin: 1.5em 0 1em 0;
+}
+
+#info #content h3{
+	font-size: 1.125em;
+	margin-bottom: 0.8em;
+}
+
+#info #content .text-1{
+	text-indent: 2em;
+	letter-spacing: 0.1em;
+	line-height: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+#info #content .info-item{
+	border: 1px solid #d3d3d3;
+}
+
+#info #content .info-item .info-img{
+	width: 24%;
+	height: 100%;
+	padding: 1%;
+	border-right-width: 1px;
+	border-right-color: #d3d3d3;
+	border-right-style: solid;
+	float: left;
+	text-align: center;
+}
+
+#info #content .info-item .info-img img{
+	width: 100%;
+	display: inline-block;
+	max-width: 220px;
+}
+
+#info #content .info-item .info-text{
+	width: 73%;
+	padding-top: 0.5em;
+	margin-left: -1px;
+	border-left-width: 1px;
+	border-left-color: #d3d3d3;
+	border-left-style: solid;
+	float: left;
+}
+
+#info #content .info-item .info-text p{
+	width: 95%;
+	font-size: 0.75em;
+	margin: 0.3em 0 0.5em 3%;
+	letter-spacing: 0.05em;
+	line-height: 1.8em;
+}
+
+#info #content .info-item .info-text a{
+	color: #136EC2;
+	text-decoration: none;
+}
+
+
+
+
+
+
+/*sidebar
+*******************************************************************************************************/
 #sidebar{
 	width: 23.40425532%;
 	margin: 1.875em 0.01041666%;
@@ -197,14 +288,17 @@ body{
 	color: #504E4E;
 }
 
+/*footer
+*******************************************************************************************************/
 #footer{
-	width: 97.91666667%;
-	height: 12.5em;
-	margin: 0 0.01041666%;
+	width: 95.91666667%;
+	height: 20em;
+	margin: 0 0.11041666%;
 	clear: both;
+	background-image: url(../img/footer.png); 
+	background-size: cover;
+	background-repeat: no-repeat;
 }
-
-
 
 
 /*animation
@@ -220,7 +314,11 @@ body{
 	text-shadow: 0 0 15px #333;
 }
 
-body#index #nav ul li:nth-child(1) a span{
+body#index #nav ul li:nth-child(1) a span,
+body#info #nav ul li:nth-child(2) a span,
+body#about #nav ul li:nth-child(2) a span
+body#animation #nav ul li:nth-child(2) a span
+body#novel #nav ul li:nth-child(2) a span{
 	text-shadow: 0 0 15px #333;
 }
 
@@ -316,6 +414,10 @@ body#index #nav ul li:nth-child(1) a span{
 		margin-right: 2%;
 	}
 	#sidebar .row{width: 49%;}
+	#index #content p:last-child{
+		width: 96%;
+		margin: 2%;
+	}
 }
 
 @media screen and (max-width:800px){
@@ -324,39 +426,48 @@ body#index #nav ul li:nth-child(1) a span{
 
 @media screen and (max-width:700px){
 	#header ul li{margin-right: 4%}
-	#content p{
-		width: 96%;
-		margin: 2%;
-	}
-	body{font-size: 13px}
+	#info #content{font-size: 14px}
+	#sidebar{font-size: 13px}
 }
 
 @media screen and (max-width:600px){
 	#header ul li{margin-right: 3%}
 	#header {font-size: 11px}
-	body{font-size: 12px}
+	#footer{background-size: contain;font-size: 13px}
+	#index #content{font-size: 12px}
 }
 
 @media screen and (max-width:500px){
 	#header ul li{margin-right: 2.5%}
 	#header {font-size: 10px}
-	body{font-size: 11px}
+	#index #content{font-size: 11px}
+	#index #content p{
+		width: 96%;
+		margin: 2%;
+	}
 }
 
 @media screen and (max-width:400px){
 	#header {font-size: 8px}
 	#header ul li{margin-right: 2%}
-	body{font-size: 10px}
+	#sidebar{font-size: 10px}
+	#index #content{font-size: 10px}
 }
 
 @media screen and (max-width:350px){
 	#header {font-size: 7px}
 	#header ul li{margin-right: 1.8%}
-	body{font-size: 9px}
+	#index #content{font-size: 9px}
+	#info #content h1 span{
+		width: 100%;
+		display: block;
+		margin-top: 0.5em;
+	}
+	#info #content h2{margin-top: 1em;}
 }
 
 @media screen and (max-width:319px){
-	body{font-size: 8px}
+	#index #content{font-size: 8px}
 }
 
 

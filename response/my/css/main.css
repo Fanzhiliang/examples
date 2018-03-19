@@ -58,7 +58,11 @@ body{
 
 #header{
 	width: 97.91666667%;
+<<<<<<< HEAD
 	height: 6.5em;
+=======
+	height: 10em;
+>>>>>>> parent of 0045dda... 3-19-0:17
 	margin: 0 0.01041666% 2em 0.01041666%;
 	position: relative;
 }
@@ -104,26 +108,24 @@ body{
 	color: #333;
 }
 
-/*content
-*******************************************************************************************************/
 #content{
 	width: 72.9166666%;
 	margin: 1.875em 0.01041666%;
 	float: right;
 }
-/*index*******************************************************************************/
-#index #content>*{
+
+#content>*{
 	float: left;
 	display: block;
 }
 
-#index #content img{
+#content img{
 	width: 25%;
 	max-width: 280px;
 	margin-right: 2%;
 }
 
-#index #content h1{
+#content h1{
 	width: 72%;
 	font-size: 2.8125em;
 	margin: 2% 0 3% 1%;
@@ -133,7 +135,7 @@ body{
 	text-shadow: 4px 4px 1px #DAD7D7;
 }
 
-#index #content em{
+#content em{
 	width: 72%;
 	font-size: 1.5em;
 	font-family: 'Glyphicons Halflings';
@@ -143,12 +145,13 @@ body{
 	letter-spacing: 0.3125em;
 }
 
-#index #content p{
+#content p{
 	width: 72%;
 	font-size: 1.25em;
 	color: #504E4E;
 	line-height: 1.625em;
 	letter-spacing: 0.3125em;
+<<<<<<< HEAD
 	text-indent: 2em;
 }
 /*info*******************************************************************************/
@@ -331,6 +334,10 @@ body{
 
 /*sidebar
 *******************************************************************************************************/
+=======
+}
+
+>>>>>>> parent of 0045dda... 3-19-0:17
 #sidebar{
 	width: 23.40425532%;
 	margin: 1.875em 0.01041666%;
@@ -379,17 +386,14 @@ body{
 	color: #504E4E;
 }
 
-/*footer
-*******************************************************************************************************/
 #footer{
-	width: 95.91666667%;
-	height: 20em;
-	margin: 0 0.11041666%;
+	width: 97.91666667%;
+	height: 12.5em;
+	margin: 0 0.01041666%;
 	clear: both;
-	background-image: url(../img/footer.png); 
-	background-size: cover;
-	background-repeat: no-repeat;
 }
+
+
 
 
 /*animation
@@ -405,11 +409,15 @@ body{
 	text-shadow: 0 0 15px #333;
 }
 
+<<<<<<< HEAD
 body#index #nav ul li:nth-child(1) a span,
 body#info #nav ul li:nth-child(2) a span,
 body#animation #nav ul li:nth-child(3) a span,
 body#novel #nav ul li:nth-child(4) a span,
 body#about #nav ul li:nth-child(5) a span{
+=======
+body#index #nav ul li:nth-child(1) a span{
+>>>>>>> parent of 0045dda... 3-19-0:17
 	text-shadow: 0 0 15px #333;
 }
 
@@ -505,10 +513,6 @@ body#about #nav ul li:nth-child(5) a span{
 		margin-right: 2%;
 	}
 	#sidebar .row{width: 49%;}
-	#index #content p:last-child{
-		width: 96%;
-		margin: 2%;
-	}
 }
 
 @media screen and (max-width:800px){
@@ -517,30 +521,42 @@ body#about #nav ul li:nth-child(5) a span{
 
 @media screen and (max-width:700px){
 	#header ul li{margin-right: 4%}
-	#info #content{font-size: 14px}
-	#sidebar{font-size: 13px}
+	#content p{
+		width: 96%;
+		margin: 2%;
+	}
+	body{font-size: 13px}
 }
 
 @media screen and (max-width:600px){
 	#header ul li{margin-right: 3%}
 	#header {font-size: 11px}
+<<<<<<< HEAD
 	#footer{background-size: contain;}
 	#index #content,#footer{font-size: 12px}
+=======
+	body{font-size: 12px}
+>>>>>>> parent of 0045dda... 3-19-0:17
 }
 
 @media screen and (max-width:500px){
 	#header ul li{margin-right: 2.5%}
 	#header {font-size: 10px}
+<<<<<<< HEAD
 	#index #content,#footer{font-size: 11px}
 	#index #content p{
 		width: 96%;
 		margin: 2%;
 	}
+=======
+	body{font-size: 11px}
+>>>>>>> parent of 0045dda... 3-19-0:17
 }
 
 @media screen and (max-width:400px){
 	#header {font-size: 8px}
 	#header ul li{margin-right: 2%}
+<<<<<<< HEAD
 	#sidebar{font-size: 10px}
 	#index #content,#footer{font-size: 10px}
 	#info #content h1 span{
@@ -548,17 +564,28 @@ body#about #nav ul li:nth-child(5) a span{
 		display: block;
 		margin-top: 0.5em;
 	}
+=======
+	body{font-size: 10px}
+>>>>>>> parent of 0045dda... 3-19-0:17
 }
 
 @media screen and (max-width:350px){
 	#header {font-size: 7px}
 	#header ul li{margin-right: 1.8%}
+<<<<<<< HEAD
 	#index #content,#footer{font-size: 9px}
 	#info #content h2{margin-top: 1em;}
 }
 
 @media screen and (max-width:319px){
 	#index #content,#footer{font-size: 8px}
+=======
+	body{font-size: 9px}
+}
+
+@media screen and (max-width:319px){
+	body{font-size: 8px}
+>>>>>>> parent of 0045dda... 3-19-0:17
 }
 
 

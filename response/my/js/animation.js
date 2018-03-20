@@ -17,7 +17,7 @@ $(document).ready(function(){
 			episodesText += "<div class='row'>";
 			episodesText += "<div class='episodes'>";
 			for(var k=0,lenk=episodes.length;k<lenk;++k){
-				episodesText += "<span title='"+episodes[k].name+"' flash='"+episodes[k].flash+"'>";
+				episodesText += "<span title='"+episodes[k].name+"' src='"+episodes[k].src+"'>";
 				episodesText += (k+1)+". "+episodes[k].name+"</span>";
 			}
 			episodesText += "</div>";
@@ -25,12 +25,23 @@ $(document).ready(function(){
 			episodesText += "</div>";
 		}
 	}
-	content.html(namesText+episodesText);
+
+	content.html(namesText+episodesText+"<iframe id='player' src='' frameborder=0 allowfullscreen='true'></iframe>");
 
 	var seasons = $("#content .seasons span"),
 		rows = $("#content .row"),
 		episodes = $("#content .row .episodes span"),
-		toggles = $("#content .row .toggle span");
+		toggles = $("#content .row .toggle span"),
+		playerFrame = $("#content .player-frame"),
+		player = $("#player"),
+		setPlayer = function(src){
+			var playerWidth = parseInt($("#content").css("width")),
+				playerHeight = parseInt(playerWidth*2/3),
+				currPlayer = $("#player");
+			if(src){currPlayer.attr("src",src);}
+			currPlayer.css("width",playerWidth);
+			currPlayer.css("height",playerHeight);
+		};
 
 	seasons.each(function(i){
 		if(i==0){$(this).addClass("selected");}
@@ -47,14 +58,6 @@ $(document).ready(function(){
 		i==0 ? $(this).css("display","block") : $(this).css("display","none");
 	});
 
-	episodes.each(function(i){
-		if(i==0){$(this).addClass("selected");}
-		$(this).click(function(event){
-			$("#content .row .episodes span.selected").removeClass("selected");
-			$(this).addClass("selected");
-		});
-	});
-
 	toggles.click(function(event){
 		var target = $(this),
 			parent = target.parents(".row"),
@@ -63,5 +66,21 @@ $(document).ready(function(){
 		target.toggleClass("selected");
 		target.attr("toggle",target.text());
 		target.text(temp);
+		$("#player").animate({"top":parent.css("height")},0.1);
 	});
+
+	episodes.each(function(i){
+		if(i==0){
+			$(this).addClass("selected");
+			setPlayer($(this).attr("src"));
+		}
+		$(this).click(function(event){
+			$("#content .row .episodes span.selected").removeClass("selected");
+			$(this).addClass("selected");
+			setPlayer($(this).attr("src"));
+		});
+	});
+
+	$(window).resize(function(){setPlayer()});
+
 });

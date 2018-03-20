@@ -573,6 +573,10 @@ body#about #nav ul li:nth-child(5) a span{
 		display: block;
 		margin-top: 0.5em;
 	}
+	#animation #content .seasons span{
+		font-size: 0.8em;
+		margin-right: 0.5em;
+	}
 }
 
 @media screen and (max-width:350px){

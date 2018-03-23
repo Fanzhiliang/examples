@@ -6,6 +6,8 @@
     <title>S O S</title>
     <link rel="shortcut icon" type="image/x-icon" href="img\sos.ico">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/novel.js"></script>
 </head>
 <body id="novel">
     <div id="wrapper">
@@ -23,7 +25,14 @@
         </div>
         <!-- 内容 -->
         <div id="content">
-            
+            <div class="page-bar">
+                <form class="bar" action="novel.html">
+                    <a href="">上一页</a>
+                    <input type="hidden" name="novel" value="">
+                    <span>第<input type="text" name="page" value="">页/共<em>50</em>页</span>
+                    <span href="" class="disable">下一页</span>
+                </form>
+            </div>
         </div>
         <!-- 侧边栏 -->
         <div id="sidebar">

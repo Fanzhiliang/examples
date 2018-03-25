@@ -428,7 +428,28 @@ body{
 	font-size: 0.8em;
 }
 
+#about #content h1{
+	font-size: 2em;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	display: inline-block;
+}
 
+#about #content h1:first-child{
+	margin-top: 0;
+}
+
+#about #content p{
+	line-height: 1.5em;
+	text-indent: 1.5em;
+}
+
+#about #content a{
+	display: block;
+	color: #136EC2;
+	text-decoration: none;
+	margin-bottom: 0.5em;
+}
 
 
 
